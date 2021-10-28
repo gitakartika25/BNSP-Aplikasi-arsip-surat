@@ -12,15 +12,15 @@ Project Aplikasi arsip surat untuk memenuhi sertifikasi bnsp 2021
 # Halaman Kategori
 ![](https://github.com/gitakartika25/BNSP-Aplikasi-arsip-surat/blob/master/kategori.png)
 # Halaman Add Kategori
-![](https://github.com/gitakartika25/BNSP-Aplikasi-arsip-surat/blob/master/add kategori.png)
+![](https://github.com/gitakartika25/BNSP-Aplikasi-arsip-surat/blob/master/addkategori.png)
 # Halaman Jabatan
 ![](https://github.com/gitakartika25/BNSP-Aplikasi-arsip-surat/blob/master/jabatan.png)
 # Halaman Add Jabatan
-![](https://github.com/gitakartika25/BNSP-Aplikasi-arsip-surat/blob/master/add jabatan.png)
+![](https://github.com/gitakartika25/BNSP-Aplikasi-arsip-surat/blob/master/addjabatan.png)
 # Halaman Data Arsip
-![](https://github.com/gitakartika25/BNSP-Aplikasi-arsip-surat/blob/master/data arsip.png)
+![](https://github.com/gitakartika25/BNSP-Aplikasi-arsip-surat/blob/master/dataarsip.png)
 # Halaman Add arsip
-![](https://github.com/gitakartika25/BNSP-Aplikasi-arsip-surat/blob/master/add arsip.png)
+![](https://github.com/gitakartika25/BNSP-Aplikasi-arsip-surat/blob/master/addarsip.png)
 # Halaman User
 ![](https://github.com/gitakartika25/BNSP-Aplikasi-arsip-surat/blob/master/user.png)
 
