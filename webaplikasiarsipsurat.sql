@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Feb 2021 pada 10.03
--- Versi server: 10.4.14-MariaDB
--- Versi PHP: 7.4.10
+-- Generation Time: Oct 28, 2021 at 01:13 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_arsip`
+-- Table structure for table `tbl_arsip`
 --
 
 CREATE TABLE `tbl_arsip` (
@@ -41,19 +41,19 @@ CREATE TABLE `tbl_arsip` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_arsip`
+-- Dumping data for table `tbl_arsip`
 --
 
 INSERT INTO `tbl_arsip` (`id_arsip`, `id_kategori`, `no_arsip`, `nama_arsip`, `deskripsi`, `tgl_upload`, `tgl_update`, `file_arsip`, `id_jabatan`, `id_user`) VALUES
-(7, 2, 'SK.666666', 'Bebas Bersyarat', 'Bebas Bersyarat 1', '2021-01-31', '2021-01-31', 'SK+Penetapan+Panitia+Pameran.pdf', 1, 1),
-(9, 6, 'SK. 123123', 'Rapid Test', 'Rapid Test Covid 19', '2021-01-31', '2021-01-31', 'SE_Penerbitan_Surat_Keterangan_Dokter.pdf', 1, 1),
-(10, 7, 'SA. 111111', 'Absensi Pegawai', 'Absensi Pegawai Bulan Februari 2021', '2021-02-01', '2021-02-01', 'Absensi.pdf', 1, 1),
-(11, 5, 'SP. 981982/1212/21', 'Pedoman Nilai Rapot', 'Pedoman Nilai Rapot  2021', '2021-02-01', '2021-02-01', 'PEDOMAN_PENDATAAN_NILAI_RAPOR1.pdf', 1, 1);
+(7, 3, '03/DIR/SE/2021', 'Pelaksanaan Perkuliahan Semester Ganjil', 'Pelaksanaan Perkuliahan Semester Ganjil', '2021-10-28', '2021-10-28', 'SE_03_DIR_SE_21_PELAKSANAAN_PERKULIAHAN_SMT_GANJIL_TA_2021_2022.pdf', 1, 1),
+(12, 5, '201/PL.2.TI/KM/2021', 'Pemberitahuan Sertifikasi BNSP', 'Kegiatan Sertifikasi Kompetensi BNSP', '2021-10-28', '2021-10-28', 'Pengumuman_Sertifikas_BNSP_2021.pdf', 1, 1),
+(13, 4, '64/PUDIR 1/KM/2021', 'Pembelajaran Luring', 'Pelaksanaan perkuliahan Semester Ganjil Tahun Akademik 2021/2022', '2021-10-28', '2021-10-28', '64__Nota_Dinas_-_RENCANA_PEMBELAJARAN_SMTR_GANJIL_2021_2022.pdf', 1, 1),
+(14, 2, '380/PL2.TI/UND/2021', 'Sosialisasi Pembelajaran Luring', 'Undangan Sosialisasi Pembelajaran Luring', '2021-10-28', '2021-10-28', 'Undangan_Sosialisasi_Pembelajaran_Luring.pdf', 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_jabatan`
+-- Table structure for table `tbl_jabatan`
 --
 
 CREATE TABLE `tbl_jabatan` (
@@ -62,20 +62,18 @@ CREATE TABLE `tbl_jabatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_jabatan`
+-- Dumping data for table `tbl_jabatan`
 --
 
 INSERT INTO `tbl_jabatan` (`id_jabatan`, `nama_jabatan`) VALUES
 (1, 'Sekretaris'),
-(2, 'Bendahara Keuangan'),
-(3, 'Kemasyarakatan'),
-(4, 'Sosial dan Budaya'),
-(6, 'Kesehatan');
+(2, 'Admin Prodi'),
+(7, 'Admin Jurusan');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_kategori`
+-- Table structure for table `tbl_kategori`
 --
 
 CREATE TABLE `tbl_kategori` (
@@ -84,21 +82,19 @@ CREATE TABLE `tbl_kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_kategori`
+-- Dumping data for table `tbl_kategori`
 --
 
 INSERT INTO `tbl_kategori` (`id_kategori`, `nama_kategori`) VALUES
-(2, 'Surat Keputusan'),
-(3, 'Surat Masuk'),
-(4, 'Surat Keluar'),
-(5, 'Surat Edaran'),
-(6, 'Surat Kesehatan'),
-(7, 'Absensi ');
+(2, 'Undangan'),
+(3, 'Pengumuman'),
+(4, 'Nota Dinas'),
+(5, 'Pemberitahuan');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -112,66 +108,66 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `name`, `address`, `level`, `id_jabatan`) VALUES
-(1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Riczky', 'Jakarta', 1, 1),
-(3, 'yahiko', 'e60c43d97055a87acdd33dc26cf1c74815417124', 'yahiko', 'amegakure', 2, 4),
-(4, 'minato', '402d443fc8f01181c0400faef3515caba06ba90d', 'Minato', 'Konohagakure', 1, 3);
+(1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Gita Kartika', 'Situbondo', 1, 1),
+(3, 'gita1234', '0270b272dadd4006c67a1099b211bab6a033143c', 'gita1234', 'gita1234', 2, 4),
+(4, 'gita2503', '95e776b05a269c61e8c377d63e6e0d72fd0f4c57', 'Gita', 'gitakartika', 1, 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `tbl_arsip`
+-- Indexes for table `tbl_arsip`
 --
 ALTER TABLE `tbl_arsip`
   ADD PRIMARY KEY (`id_arsip`);
 
 --
--- Indeks untuk tabel `tbl_jabatan`
+-- Indexes for table `tbl_jabatan`
 --
 ALTER TABLE `tbl_jabatan`
   ADD PRIMARY KEY (`id_jabatan`);
 
 --
--- Indeks untuk tabel `tbl_kategori`
+-- Indexes for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_arsip`
+-- AUTO_INCREMENT for table `tbl_arsip`
 --
 ALTER TABLE `tbl_arsip`
-  MODIFY `id_arsip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_arsip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_jabatan`
+-- AUTO_INCREMENT for table `tbl_jabatan`
 --
 ALTER TABLE `tbl_jabatan`
-  MODIFY `id_jabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_jabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_kategori`
+-- AUTO_INCREMENT for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
   MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
