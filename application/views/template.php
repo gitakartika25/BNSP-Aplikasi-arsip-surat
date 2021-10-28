@@ -124,6 +124,11 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
+        <li <?=$this->uri->segment(1) == 'about' ?'class="active"' : '' ?>>
+          <a href="<?=site_url('about');?>">
+          <i class="fa fa-user"></i> <span>About</span>
+          </a>
+        </li>
         <li <?=$this->uri->segment(1) == 'kategori' ?'class="active"' : '' ?>>
           <a href="<?=site_url('kategori');?>">
             <i class="fa fa-archive"></i> <span>Kategori</span>
